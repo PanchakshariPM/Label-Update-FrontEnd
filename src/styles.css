@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./assets/flag-icon-css-master/css/flag-icon.min.css" ;
+
+.bs-popover-bottom {
+background-color: #f96a6a !important;
+}
+.popover-header{
+background-color: #f96a6a!important;
+color: #ffff;
+}
+.bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+top: 1px;
+border-bottom-color: #f96a6a;
+}
+ 
+@font-face{
+    font-family:AkzidenzGrotesk;
+    src: url("./assets/fonts/akzidenz-grotesk-light.ttf") };
+    
+ @font-face{
+    font-family:OpenSans;
+    src: url("./assets/fonts/OpenSans-Light.ttf") };
+  @import "./assets/flag-icon-css-master/css/flag-icon.min.css"  ;

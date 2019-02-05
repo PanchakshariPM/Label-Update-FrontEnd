@@ -1,0 +1,63 @@
+<div>
+  <div class="col-md-10  pt-4 pb-2 text-left">
+    <button mat-button>
+      <div class="row" routerLink="/home/dashboard">
+        <div class="col-sm-2">
+          <i class="fa fa-arrow-left" aria-hidden="true" style="font-size:18px"></i>
+        </div>
+        <div class="col-sm-2 fontClass">
+          <strong>Back</strong>
+        </div>
+      </div>
+    </button>
+  </div>
+  <mat-card class="m-1">
+    <form name="createForm">
+      <div class="form-group row">
+        <label class="col-3 col-form-label fontClass">Country</label>
+        <div class="col-9">
+          <div>
+            <select class="form-control fontClass" style="border:1px solid #000" required>
+              <option>Select Country</option>
+              <option [(ngModel)]="countryModel" name="country" *ngFor="let country of states ">{{country}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-3 col-form-label fontClass">Poject Name</label>
+        <div class="col-9">
+          <input type="text" class="form-control" placeholder="Product Name" [(ngModel)]="projectNameModel" name="projectName"
+            required>
+        </div>
+      </div>
+      <div class="col-12 custom-file mb-3">
+        <input type="file" class="custom-file-input fontClass" id="customFile" name="filename">
+        <label class="custom-file-label fontClass" for="customFile">Upload Reference File</label>
+      </div>
+      <div class="col-12 custom-file mb-3">
+        <input type="file" class="custom-file-input fontClass" id="customFile" name="filename">
+        <label class="custom-file-label fontClass" for="customFile">Upload Label for QC</label>
+      </div>
+      <div class="col-12 custom-file mb-3">
+        <input type="file" class="custom-file-input fontClass" id="customFile" name="filename">
+        <label class="custom-file-label fontClass" for="customFile">Upload Mapping Doc.</label>
+      </div>
+      <div class="col-12 custom-file mb-3">
+        <input type="file" class="custom-file-input fontClass" id="customFile" name="filename">
+        <label class="custom-file-label fontClass" for="customFile">Upload Summary of Change</label>
+      </div>
+      <div class="row float-right">
+        <div class="col">
+          <button [disabled]="!createForm.valid" class="createButton fontClass" mat-raised-button>Save</button>
+        </div>
+        <div class="col">
+          <button class="fontClass" mat-raised-button>Clear</button>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,84 @@
+<br>
+<div class="row ml-auto mr-auto ">
+  <div class="col-md-10  pt-4 pb-2 text-left">
+    <button mat-button routerLink="/home/dashboard">
+      <div class="row">
+        <div class="col-sm-2">
+          <i class="fa fa-arrow-left" aria-hidden="true" style="font-size:18px"></i>
+        </div>
+        <div class="col-sm-2 fontClass">
+          Back
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="col-md-2 pt-4 pb-2 text-right">
+    <button type="button" (click)="create()" class="fontClass" style="color:#fff;border-radius:5px;  padding: 6px;border: none;background-color:#1da9f4;">
+      Create <a routerLink="/create"><i class="fa fa-plus" style="color:#fff"></i>
+      </a> </button>
+  </div>
+</div>
+
+<br>
+<div class="card mt-3 ml-1">
+  <div class="card-body">
+    <table class="table">
+
+      <thead class="fontClass">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">File Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Owner</th>
+          <th scope="col">Size</th>
+          <th scope="col">Date Modified</th>
+          <th>Conflicts</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <thead class="fontClass">
+        <tr>
+          <th scope="row">
+            <img src="../../assets/images/flag1.png">
+          </th>
+          <td>Master File</td>
+          <td>Referrence File</td>
+          <td>Label Master</td>
+          <td>1.2 Mb</td>
+          <td>30 Jan 2019</td>
+
+        </tr>
+      </thead>
+      <tbody class="fontClass">
+        <tr *ngFor="let folder of folderDetails">
+          <th scope="row">{{folder.no}}</th>
+          <td>{{folder.fileName}}</td>
+          <td class="fileType">{{folder.type}}</td>
+          <td>{{folder.owner}}</td>
+          <td>{{folder.size}}</td>
+          <td>{{folder.dateModified}}</td>
+          <td>
+            <div *ngIf="folder.fileName==='Label'">
+              <ng-template class="fontClass" #popContent>
+                <p *ngFor="let conflicts of  folder.Conflicts ; let i = index">
+                  <a routerLink="/home/conflicts" style="color:#fff;text-decoration: none">
+                    {{i+1}} {{conflicts}}
+                  </a>
+                </p>
+              </ng-template>
+              <span class="dot text-center" placement="bottom" [style.border]="folderDetails.conflictsNumber == '0' ? '3px solid #5fbd5f' :' 3px solid #f96a6a'"
+                [ngbPopover]="popContent" popoverTitle="Conflicts">
+                {{folder.conflictsNumber}}
+              </span>
+            </div>
+          </td>
+          <td>
+            <button *ngIf="folder.type==='Label for QC'" class="compareButton" mat-button>Compare</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <br>
+  </div>
+</div>

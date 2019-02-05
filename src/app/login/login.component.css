@@ -1,0 +1,36 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.loginLogo{
+ width: 20%;
+}
+
+.mat-card { 
+  margin:5em;
+ }
+
+.example-full-width {
+  width: 100%;
+}
+.loginLogo{
+ width: 20%;
+}
+.mat-card { 
+  margin:5em;
+ }
+ .loginButton{
+   background-color: #1da9f4;
+   color: white;
+ }
+
+ .fontClass{
+   font-family: Arial;
+   font-size: 14px;
+ }

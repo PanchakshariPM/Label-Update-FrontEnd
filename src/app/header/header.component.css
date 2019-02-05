@@ -1,0 +1,38 @@
+.img{
+  width: 69% !important;
+  height: 42% !important;
+}
+  .navbar-brand > img {
+    width: 86%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+   
+}
+ .navbarColour{
+    background-color: #1da9f4;
+    }
+ 
+    .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    }
+    
+    .example-full-width {
+    width: 100%;
+    }
+    .searchBar{
+    width:50%
+    }
+
+  
+    .dropdown-menu {
+        position: absolute;
+        left: 265px;
+        text-align:center;
+        top: 100%;
+      }
+.fontClass{
+  font-family: Arial;
+  font-size: 14px;
+}

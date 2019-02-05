@@ -1,0 +1,25 @@
+.masterFileColor{
+    color: #f1e30a !important;
+}
+.dot {
+    height: 30px;
+    width: 31px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 25px;
+  /*  border: 3px solid #e56057;*/
+  }
+  .compareButton{
+      background-color:#1da9f4;
+      color: white;
+  }
+  .fileType{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .fontClass{
+      font-family: Arial;
+      font-size: 14px;
+  }

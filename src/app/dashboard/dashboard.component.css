@@ -1,0 +1,30 @@
+td{
+    font-size: 14px;
+    font-family: arial;
+    color:grey;
+}
+th{
+    color:grey;
+    font-size: 14px;
+    font-family: arial !important; 
+}
+.container {
+    max-width: 100%;
+}
+.dot {
+    height: 30px;
+    width: 31px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 25px;
+  /*  border: 3px solid #e56057;*/
+  }
+  .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
+    top: 0;
+    border-bottom-color: rgb(236, 146, 146);
+}
+.fontClass{
+    font-family: Arial;
+    font-size: 14px;
+}

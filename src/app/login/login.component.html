@@ -1,0 +1,48 @@
+<div>
+  <div class="mb-auto mt-auto">
+    <div class="card shadow-lg ml-auto mr-auto" style="width:60%;margin-top:100px;">
+      <br>
+      <div class="text-center">
+
+        <div>
+          <img class="loginLogo fontClass" md-fab-image src="../assets/images/pfizernew.jpg">
+        </div>
+        <br>
+        <div>
+          <h5 class="fontClass">Welcome to Lable Change Managemenet</h5>
+        </div>
+        <br>
+        <div>
+          <div class="ml-auto mr-auto">
+            <form class="ml-auto mr-auto example-form fontClass">
+              <mat-form-field class="example-full-width fontClass">
+                <input matInput placeholder="Email" [formControl]="emailFormControl">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width fontClass">
+                <input type="password" matInput placeholder="Password" [(ngModel)]="password" [formControl]="passwordFormControl">
+                <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
+                  Please enter a valid Password
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <div class="text-right">
+                <button class="loginButton fontClass" mat-raised-button (click)="login()" [disabled]="!emailFormControl.valid && !passwordFormControl.valid">Login</button>
+              </div>
+            </form>
+
+          </div>
+          <br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

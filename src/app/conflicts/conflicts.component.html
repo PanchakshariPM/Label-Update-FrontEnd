@@ -1,0 +1,60 @@
+<div class="col-md-10 pt-4 pb-2 text-left">
+  <button mat-button>
+    <div class="row" routerLink="/home/dashboard">
+      <div class="col-sm-2">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="font-size:18px"></i>
+      </div>
+      <div class="col-sm-2 fontClass">
+        <strong>Back</strong>
+      </div>
+    </div>
+  </button>
+</div>
+<br>
+
+<div class="m-1 example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!-- <ng-container matColumnDef="">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> <strong></strong> </mat-header-cell>
+      <mat-cell> <strong></strong> </mat-cell>
+    </ng-container> -->
+
+    <ng-container class="fontClass" matColumnDef="noOfConflicts">
+      <mat-header-cell class="fontClass" *matHeaderCellDef mat-sort-header> <strong>No Of Conflicts</strong>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <strong class="fontClass">{{element.noOfConflicts}}</strong> </mat-cell>
+    </ng-container>
+
+    <ng-container class="fontClass" matColumnDef="conflicts">
+      <mat-header-cell class="fontClass" *matHeaderCellDef mat-sort-header> <strong>Conflicts</strong>
+      </mat-header-cell>
+      <mat-cell class="fontClass" *matCellDef="let element"><strong> {{element.conflicts}} </strong></mat-cell>
+    </ng-container>
+
+    <ng-container class="fontClass" matColumnDef="recommendations">
+      <mat-header-cell class="fontClass" *matHeaderCellDef mat-sort-header> <strong>Recommendations</strong>
+      </mat-header-cell>
+      <mat-cell class="fontClass" *matCellDef="let element"><strong> {{element.recommendations}}</strong> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row" [cdkDetailRow]="row"
+      [cdkDetailRowTpl]="tpl">
+    </mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+<br>
+<ng-template #tpl let-element>
+  <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden">
+    <div class="row">
+      <div class="col-md-3 col-sm-2"></div>
+      <!-- <div class="col-md-2 col-sm-1">{{element.labelConflicts}}</div> -->
+      <div class="col-md-1 col-sm-2"></div>
+      <div class="col-md-3 col-sm-2"> {{element.conflictConflicts}}</div>
+      <div class="col-md-2 col-sm-1">{{element.recommendationConflicts}}</div>
+    </div>
+  </div>
+</ng-template>
+<br>

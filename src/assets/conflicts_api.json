@@ -1,0 +1,139 @@
+{
+
+    "conflict_formatting": [{
+    
+    "text_summary": "some text with specific length",
+    
+    "conflict_type": "FONT_SIZE_MISMATCH",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": "1.1 subsection",
+    
+    "font_size": 22,
+    
+    "font_name": "Arial",
+    
+    "recommendations": {
+    
+    "font_size": 20,
+    
+    "font_name": null
+    
+    }
+    
+    },
+    
+    {
+    
+    "text_summary": "some text with specific length",
+    
+    "conflict_type": "FONT_NAME_MISMATCH",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": "1.1 subsection",
+    
+    "font_size": 22,
+    
+    "font_name": "Arial",
+    
+    "recommendations": {
+    
+    "font_size": null,
+    
+    "font_name": "Times New Roman"
+    
+    }
+    
+    }
+    
+    ],
+    
+    
+    
+    
+    
+    "conflict_content": [{
+    
+    "text_summary": "some text with specific length",
+    
+    "conflict_type": "CONTENT_MISSING_MISMATCH",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": "1.1 subsection",
+    
+    "recommendations": {
+    
+    "missing": false,
+    
+    "text": "this should be the text"
+    
+    }
+    
+    }, 
+    
+    {
+    
+    "text_summary": "some text with specific length",
+    
+    "conflict_type": "CONTENT_MISSING_MISMATCH",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": "1.1 subsection",
+    
+    "recommendations": {
+    
+    "missing": true,
+    
+    "text": "this text is missing"
+    
+    }
+    
+    },
+    
+    {
+    
+    "text_summary": "some text with specific length", 
+    
+    "conflict_type": "CONTENT_ORDER",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": null,
+    
+    "recommendations": {
+    
+    "Action": "replace",
+    
+    "text": "1.2 some text"
+    
+    }
+    
+    },
+    
+    {
+    
+    "text_summary": "some text with specific length", 
+    
+    "conflict_type": "CONTENT_ORDER",
+    
+    "section": "1. SectionA",
+    
+    "sub_section": null,
+    
+    "recommendations": {
+    
+    "Action": "Delete",
+    
+    "text": "1.2 some text"
+    
+    }
+    
+    }
+    
+    ]
+    
+    }

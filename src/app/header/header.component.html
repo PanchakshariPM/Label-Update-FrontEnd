@@ -1,0 +1,31 @@
+<nav class="row navbar navbar-expand-lg navbar-light navbarColour">
+
+    <div class="col-2">
+        <a class="navbar-brand" routerLink="/">
+            <img class="img" src="./assets/images/logo.jpg">
+        </a>
+    </div>
+
+    <div class="col-6">
+        <div class="searchBar ml-auto">
+            <form class="example-form">
+                <mat-form-field class="example-full-width fontClass">
+                    <input type="search" matInput placeholder="Search">
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-4 text-right">
+        <div class="dropdown">
+            <button mat-button data-toggle="dropdown">
+                <i class="fa fa-user-circle-o fa-2x" style="color:white" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu fontClass">
+                <li><a>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

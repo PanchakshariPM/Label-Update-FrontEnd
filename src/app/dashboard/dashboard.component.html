@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="row ml-auto mr-auto ">
+    <div class="col-md-10 text-left">
+      <h4 class="pt-4 pb-2 fontClass" style="color:#1da9f4"> Dashboard</h4>
+    </div>
+    <div class="col-md-2 pt-4 pb-2 text-right">
+
+      <a routerLink="/home/create">
+        <button type="button" class="fontClass" style="color:#fff;border-radius:5px;  padding: 6px;border: none;background-color:#1da9f4;">
+          Create <i class="fa fa-plus" style="color:#fff"></i>
+        </button> </a> </div>
+  </div>
+  <div class="row ml-auto mr-auto ">
+    <div class="col-md-10 text-left">
+      <h4 class="pt-4 pb-2" style="color:#1da9f4"> </h4>
+    </div>
+  </div>
+
+
+  <div class="row ml-auto mr-auto">
+    <div class="table-responsive">
+      <table class="table table-borderless">
+        <thead class="fontClass" style="border-bottom:1px solid #c7c6c6">
+          <tr>
+            <th>Project Name</th>
+            <th>Owner</th>
+            <th>Date Modified</th>
+            <th>Country</th>
+            <th>Conflicts</th>
+          </tr>
+        </thead>
+        <tbody class="fontClass">
+          <tr *ngFor="let response of result">
+            <td>
+
+              <div>
+                <i class="fa fa-folder-open fa-lg" aria-hidden="true" style="color:#f5c34f"><b><a routerLink="/home/label-info"
+                      class="pl-3" style="color:#3f3f48;font-size:14px;text-decoration: none;font-family: arial;">
+                      {{response.Filename}} </a></b></i>
+              </div>
+
+            </td>
+            <td>
+              <div> {{response.Owner}}</div>
+            </td>
+            <td>
+              <div>{{response.Datemodified}}</div>
+            </td>
+            <td>
+              <div> <span style="width:3em;line-height: 2em;" class="flag-icon flag-icon-{{response.randomNationISOCode | lowercase}}"></span></div>
+            </td>
+            <td>
+              <ng-template #popContent>
+                <p *ngFor="let conflicts of  response.Conflicts.slice(1) ; let i = index"><a routerLink="/home/conflicts"
+                    style="color:white;text-decoration: none">{{i +1}} {{conflicts}}</a></p>
+              </ng-template>
+              <span class="dot text-center" placement="bottom" [style.border]="response.conflictsNumber == '0' ? '3px solid #5fbd5f' :' 3px solid #f96a6a'"
+                [ngbPopover]="popContent" popoverTitle="Conflicts">
+                {{response.conflictsNumber}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator class="fontClass" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+
+</div>
