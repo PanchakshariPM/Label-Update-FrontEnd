@@ -10,7 +10,7 @@ background-color: #f96a6a !important;
 }
 .popover-header{
 background-color: #f96a6a!important;
-color: #ffff;
+color: #ffff !important;
 }
 .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
 top: 1px;

@@ -49,11 +49,11 @@
 <ng-template #tpl let-element>
   <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden">
     <div class="row">
-      <div class="col-md-3 col-sm-2"></div>
-      <!-- <div class="col-md-2 col-sm-1">{{element.labelConflicts}}</div> -->
-      <div class="col-md-1 col-sm-2"></div>
-      <div class="col-md-3 col-sm-2"> {{element.conflictConflicts}}</div>
-      <div class="col-md-2 col-sm-1">{{element.recommendationConflicts}}</div>
+      <div class="col-md-3 col-sm-2" style="color:grey;font-size:13px;font-family:arial"></div>
+      <div class="col-md-1 col-sm-2" style="color:grey;font-size:13px;font-family:arial"></div>
+      <div class="col-md-2 col-sm-2" style="color:grey;font-size:13px;font-family:arial"> {{element.conflictConflicts}}</div>
+      <div class="col-md-2 col-sm-2" style="color:grey;font-size:13px;font-family:arial"></div>
+      <div class="col-md-3 col-sm-2 " style="color:grey;font-size:13px;font-family:arial;margin-left: -23px;">{{element.recommendationConflicts}}</div>
     </div>
   </div>
 </ng-template>
