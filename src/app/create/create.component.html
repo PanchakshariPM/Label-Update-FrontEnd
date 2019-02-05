@@ -11,15 +11,17 @@
       </div>
     </button>
   </div>
+
   <mat-card class="m-1">
-    <form name="createForm">
+
+    <form #createForm="ngForm">
       <div class="form-group row">
         <label class="col-3 col-form-label fontClass">Country</label>
         <div class="col-9">
           <div>
-            <select class="form-control fontClass" style="border:1px solid #000" required>
+            <select class="form-control" style="border:1px solid #000; font-family: Arial;" required>
               <option>Select Country</option>
-              <option [(ngModel)]="countryModel" name="country" *ngFor="let country of states ">{{country}}</option>
+              <option *ngFor="let country of states">{{country}}</option>
             </select>
           </div>
         </div>
@@ -27,7 +29,7 @@
       <div class="form-group row">
         <label class="col-3 col-form-label fontClass">Poject Name</label>
         <div class="col-9">
-          <input type="text" class="form-control" placeholder="Product Name" [(ngModel)]="projectNameModel" name="projectName"
+          <input type="text" [(ngModel)]="projectNameModel" name="projectNameModel" class="form-control" placeholder="Project Name"
             required>
         </div>
       </div>
@@ -49,15 +51,17 @@
       </div>
       <div class="row float-right">
         <div class="col">
-          <button [disabled]="!createForm.valid" class="createButton fontClass" mat-raised-button>Save</button>
+          <button type="submit" [disabled]="createForm.form.invalid" class="createButton fontClass" mat-raised-button>Save</button>
         </div>
         <div class="col">
-          <button class="fontClass" mat-raised-button>Clear</button>
+          <button [disabled]="createForm.form.invalid" class="fontClass" mat-raised-button>Clear</button>
         </div>
       </div>
       <br>
       <br>
       <br>
     </form>
+
   </mat-card>
+
 </div>
