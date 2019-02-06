@@ -12,7 +12,7 @@
     </button>
   </div>
   <mat-card class="m-1">
-    <form name="createForm">
+    <form #createForm="ngForm">
       <div class="form-group row">
         <label class="col-3 col-form-label fontClass">Country</label>
         <div class="col-9">
@@ -49,10 +49,10 @@
       </div>
       <div class="row float-right">
         <div class="col">
-          <button [disabled]="!createForm.valid" class="createButton fontClass" mat-raised-button>Save</button>
+          <button [disabled]="createForm.form.invalid" class="createButton fontClass" mat-raised-button>Save</button>
         </div>
         <div class="col">
-          <button class="fontClass" mat-raised-button>Clear</button>
+          <button type="clear" [disabled]="createForm.form.invalid" class="fontClass" mat-raised-button>Clear</button>
         </div>
       </div>
       <br>
